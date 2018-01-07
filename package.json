@@ -1,0 +1,42 @@
+{
+  "name": "react-express-react-router-starter",
+  "version": "1.0.0",
+  "description": "Starter kit for react app with react-router & express",
+  "main": "index.js",
+  "scripts": {
+    "clear": "rm -rf ./build",
+    "dev": "nodemon --watch *.js --exec \"webpack-dev-server\"",
+    "build": "npm run clear && webpack -p",
+    "start": "nodemon ./server/index.js",
+    "postinstall": "webpack -p",
+    "lint:fix": "eslint --fix . --ext .js, .jsx",
+    "lint": "eslint . --ext .js, .jsx",
+    "test": "jest --verbose --coverage",
+    "test:cov": "rm -rf ./coverage && npm run test && cat ./coverage/lcov.info | coveralls"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "chai": "^4.1.2",
+    "coveralls": "^3.0.0",
+    "eslint-config-latest": "^1.0.6",
+    "jest-cli": "^22.0.4",
+    "mz": "^2.7.0",
+    "nodemon": "^1.14.7",
+    "supertest": "^3.0.0",
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
+  },
+  "dependencies": {
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-router-dom": "^4.2.2"
+  }
+}
